@@ -31,11 +31,11 @@ fn main() {
     // Run explorer.exe in the current directory
     // let mut child = Command::new("explorer.exe")
     //                   .current_dir(env::current_dir())
-    Command::new("explorer.exe")
+    let mut child = Command::new("explorer.exe")
         .arg(target_dir.replace("/","\\"))
         .spawn()
         .expect("Failed to spawn explorer.exe");
-
+    
     // Wait for the process to finish
     // let exit_status = child.wait().expect("Failed to wait for explorer.exe");
 
